@@ -5,6 +5,7 @@ import { HomePage } from './components/HomePage';
 import { ChatPage } from './components/ChatPage';
 import { LawyersPage } from './components/LawyersPage';
 import { FloatingChatButton } from './components/FloatingChatButton';
+import { AboutPage } from './components/AboutPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -20,6 +21,8 @@ export default function App() {
         return <ChatPage onNavigate={setCurrentPage} user={user} />;
       case 'lawyers':
         return <LawyersPage onNavigate={setCurrentPage} user={user} />;
+      case 'about':
+        return <AboutPage onNavigate={setCurrentPage} user={user} />;
       default:
         return <HomePage onNavigate={setCurrentPage} user={user} />;
     }
